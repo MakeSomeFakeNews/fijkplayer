@@ -100,18 +100,6 @@ public class FijkPlugin implements MethodCallHandler, FlutterPlugin, ActivityAwa
     /**
      * Plugin registration.
      */
-    @SuppressWarnings("unused")
-    public static void registerWith(Registrar registrar) {
-        final MethodChannel channel = new MethodChannel(registrar.messenger(), "befovy.com/fijk");
-        FijkPlugin plugin = new FijkPlugin();
-        plugin.initWithRegistrar(registrar);
-        channel.setMethodCallHandler(plugin);
-
-        final FijkPlayer player = new FijkPlayer(plugin, true);
-        player.setupSurface();
-        player.release();
-    }
-
     @Override
     public void onAttachedToEngine(@NonNull FlutterPluginBinding binding) {
         final MethodChannel channel = new MethodChannel(binding.getBinaryMessenger(), "befovy.com/fijk");
