@@ -57,9 +57,7 @@ import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.view.TextureRegistry;
 import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 
-/**
- * FijkPlugin
- */
+
 public class FijkPlugin implements MethodCallHandler, FlutterPlugin, ActivityAware, FijkEngine, FijkVolume.VolumeKeyListener, AudioManager.OnAudioFocusChangeListener {
 
     // show system volume changed UI if no playable player
